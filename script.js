@@ -83,6 +83,36 @@ function renderTasks(filter = "all") {
       deleteTask(task.id);
     });
 
+    li.querySelector("span").addEventListener("dblclick", () => {
+      const span = li.querySelector("span");
+      const inputNew = document.createElement("input");
+      inputNew.type = "text";
+      inputNew.value = span.textContent;
+      li.insertBefore(inputNew, span);
+      li.removeChild(span);
+
+      inputNew.focus();
+
+      inputNew.addEventListener("blur", () => {
+        const newValue = inputNew.value.trim();
+        if (newValue) {
+          task.inputValue = newValue;
+          saveTasks();
+          renderTasks();
+        } else {
+          span.textContent = task.inputValue;
+          li.insertBefore(span, inputNew);
+        }
+        li.removeChild(inputNew);
+      });
+
+      inputNew.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          inputNew.blur();
+        }
+      });
+    });
+
     list.appendChild(li);
   });
 }

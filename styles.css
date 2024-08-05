@@ -122,9 +122,17 @@ li {
   padding: 10px;
 }
 
+li input[type="text"] {
+  flex: 1;
+  max-width: 130px; 
+  margin-right: 10px;
+}
+
+
 .task-buttons {
   display: flex;
   gap: 5px;
+  flex-shrink: 0;
 }
 
 li.low {
@@ -142,4 +150,19 @@ li.high {
 .completed span{
   text-decoration: line-through;
   color: grey;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+li span {
+  flex: 1;
+  overflow: hidden; 
+}
+
+input:focus, select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.2); 
 }
