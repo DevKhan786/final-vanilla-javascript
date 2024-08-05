@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "inter", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  min-width: 250px;
+  max-width: 400px;
+  padding: 70px 40px;
+  box-shadow: 0 0 4px rgb(0, 0, 0, 1);
+  border-radius: 30px;
+  gap: 20px;
+}
+
+p{
+  font-size: 0.8em;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  max-width: calc((100% - 20px) / 3);
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+input,
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: white;
+}
+
+.task-add {
+  max-width: 100%;
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 4px rgb(0, 0, 0, 0.5);
+}
+
+.task-add:hover {
+  background-color: white;
+  box-shadow: 0 0 4px rgb(0, 0, 0, 1);
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  box-shadow: 0 0 2px rgb(0, 0, 0, 1);
+  border-radius: 20px;
+  width: 100%;
+  padding: 0;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+li.low {
+  background-color: greenyellow;
+}
+
+li.medium {
+  background-color: orange;
+}
+
+li.high {
+  background-color: red;
+}
+
+.completed span{
+  text-decoration: line-through;
+  color: grey;
+}
